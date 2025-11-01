@@ -61,7 +61,7 @@ main:
 		    ; bit 3-0 PWM mode Give the 00 in bits 7-6 the bits 1-0 could be xx
     movwf CCP1CON
     
-    movlw 0b00000100; Should set the pulse with to ~25 us (50% duty cycle)
+    movlw 0b00000100; Change this number to control pusle with (and adjust duty cycle)
     movwf CCPR1L; 
      
     
