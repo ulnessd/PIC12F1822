@@ -62,8 +62,6 @@ main:
     movwf CCP1CON
     
 
-     
-    
     
 mainloop:
     nop
@@ -75,19 +73,16 @@ mainloop:
     call delay
     nop
     BANKSEL CCPR1L
-    movlw 0b00111000; Change this number to control pusle with (and adjust duty cycle)
+    movlw 0b00100000; Change this number to control pusle with (and adjust duty cycle)
     movwf CCPR1L; 
     BANKSEL PORTA
     movlw 60
     call delay
     nop
-    
-    
     goto mainloop  
      
 
-
-    
+   
 delay: ; this is a three-layer nested loop. wouldn't need 3 but it is what I had 
 	; from other programs
     movwf 0xB2
